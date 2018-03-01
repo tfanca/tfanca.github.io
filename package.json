@@ -1,0 +1,30 @@
+{
+  "name": "tfan.ca",
+  "homepage": "tfanca.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "formik": "^0.11.11",
+    "gh-pages": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "tachyons": "^4.9.1",
+    "tachyons-cli": "^1.2.0",
+    "web3": "^1.0.0-beta.30",
+    "web3-utils": "^1.0.0-beta.30"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "css": "tachyons src/css/app.css > src/index.css --minify",
+    "updateabi": "rm -rf ./src/abi && mkdir ./src/abi && cp $GOPATH/src/github.com/dt665m/etherverse/dapp/abi/* ./src/abi",
+    "prestart": "npm run css && npm run updateabi",
+    "prebuild": "npm run css && npm run updateabi",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
+  }
+}
