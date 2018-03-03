@@ -10,8 +10,8 @@ export default class Profile extends Component {
 
     componentDidMount() {
         console.log('PROFILE MOUNT');
-        this.getData();
-        this.balanceUpdateInterval = setInterval(this.getData.bind(this), 2000);
+        //this.getData();
+        //this.balanceUpdateInterval = setInterval(this.getData.bind(this), 2000);
         //this.getData(this.props.location.pathname);
     }
 
@@ -43,13 +43,14 @@ export default class Profile extends Component {
         return (
             <div className='tc'>
                 <h1 className='f3 mb2'>{profile.name}</h1>
-                <p className='f3 mb2'>{'0xdbd0699036eddcae919d3bca25ae8b7e5675a99b'}</p>
                 <img
                     className=' h4 w4 dib ba b--black-05 pa2'
                     src={profile.src}
-                    alt='profile pic' />
+                    alt='profile pic'
+                />
+                <p className='f3 mb2'>{'0xdbd0699036eddcae919d3bca25ae8b7e5675a99b'}</p>
 
-                <h2 className='f3 mb2'>Balance: {balance !== NaN ? balance.toFixed(2) + ' USD' : 'loading...'}</h2>
+                {/* <h2 className='f3 mb2'>Balance: {balance !== NaN ? balance.toFixed(2) + ' USD' : 'loading...'}</h2> */}
             </div>
         );
     }

@@ -44,10 +44,10 @@ const Topics = ({ match }) => (
       </li>
     </ul>
 
-    <Route path={`${match.path}/:topicId`} component={Topic}/>
+    <Route path={`${match.path}/:topicId`} component={Topic} />
     <Route exact path={match.path} render={() => (
       <h3>Please select a topic.</h3>
-    )}/>
+    )} />
   </div>
 )
 
@@ -60,11 +60,11 @@ const BasicExample = () => (
         <li><Link to="/topics">Topics</Link></li>
       </ul>
 
-      <hr/>
+      <hr />
 
-      <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/topics" component={Topics}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/topics" component={Topics} />
     </div>
   </Router>
 )

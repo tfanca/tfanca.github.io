@@ -12,6 +12,7 @@ window.addEventListener('load', async function () {
     }
     catch (e) {
         console.log(e);
+        ReactDOM.render(<App />, document.getElementById('root'));
         //Render some failthing here
     }
 })

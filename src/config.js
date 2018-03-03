@@ -1,5 +1,6 @@
 export default {
     // w3u: Web3Utils,
+    googleForm: 'https://script.google.com/macros/s/AKfycbxBssL16JZz3Di9CqJ6982fAVRRWr4dzNtbFCv7_WPQTa-Vuzw0/exec',
     networks: {
         mainnet: {
             contractAddress: "",
